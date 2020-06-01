@@ -1,0 +1,22 @@
+{
+  "name": "nipa1902_project",
+  "version": "1.0.0",
+  "description": "Full Stack CRUD App for DT162G Project (MEVN stack)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.15",
+    "vue": "^1.0.28-csp"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Nils Paulsson (nipa1902)",
+  "license": "MIT"
+}
