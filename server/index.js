@@ -16,11 +16,12 @@ const posts = require('./routes/api/posts');
 // Re-direct any posts through the variable
 app.use('/api/posts', posts);
 
+// Production setup for heroku to locate folders
 if (process.env.NODE_ENV === 'production') {
 
-    app.use(express.static(__dirname + '../client'));
+    app.use(express.static(__dirname + './client'));
 
-    app.get(/.*/, (req, res) => res.sendFile(__dirname + '../client/index.html'));
+    app.get(/.*/, (req, res) => res.sendFile(__dirname + './client/index.html'));
 }
 
 // Listen for heroku port, or just use port 3000 for local 
