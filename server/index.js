@@ -18,7 +18,7 @@ app.use('/api/posts', posts);
 
 if (process.env.NODE_ENV === 'production') {
 
-    app.get(/.*/, (req, res) => res.sendFile(__dirname + "/client/index.html"));
+    app.get(/.*/, (req, res) => res.sendFile(__dirname + '../client/index.html'));
 }
 
 // Listen for heroku port, or just use port 3000 for local 
