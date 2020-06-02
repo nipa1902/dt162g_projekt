@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <PostHandler/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import PostHandler from './components/PostHandler.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    PostHandler
+    PostHandler,
+    Footer
   }
 }
 </script>

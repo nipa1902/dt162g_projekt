@@ -45,12 +45,6 @@
 
 </div> <!-- End Post-Wrapper -->
 
-<span class="credit">   
-<a href="https://icons8.com/icon/VFaz7MkjAiu0/checkmark">Checkmark icon by Icons8</a>
-<br>
-<a href="https://fontawesome.com/license">Edit icon by Font Awesome</a>
-</span>
-
 
 </div> <!-- End Container -->
 
@@ -392,6 +386,7 @@ div.post {
   div.post.update-show > input.update-post {
   left: 0;
   top: 4.5rem;
+  width: auto; 
 }
 
   .update-show > button.update-post {
