@@ -25,13 +25,14 @@
   v-bind:key="post._id"
   v-on:click="$event.target.classList.toggle('is-done'); taskFinished()">
   
+  <!-- Actual post data being printed in loop -->
   <div class="post-date"> {{  `${post.createdAt.getDate()}/${post.createdAt.getMonth() +1}/${post.createdAt.getFullYear()}`  }} </div>
   <span class="post-text"> {{ post.text }}  </span> <br> 
 
   <!-- Update -->
-  <!-- <button  v-on:click="$event.target.parentNode.classList.toggle('update-show')" class="toggle-update"> -->
   <button v-on:click="showUpdate()" class="toggle-update"></button>
   
+  <!-- Input field for updating -->
   <input type="text" class="update-post" :id="index" :placeholder=" [[ post.text ]]" 
   v-model="updateText" 
   v-on:keyup.enter="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')">
@@ -145,15 +146,13 @@ export default {
     var x = document.getElementsByClassName("post is-done");
     var y = document.getElementsByClassName("post");
 
-      // stop any audio, set volume.
-      let player = document.createElement("audio");
-      player.pause();
-      player.volume = 0.05;
-      player.src = '';
-
       // VICTORY CHECKER
       // if all tasks done play audio and reset board
       if (x.length >= y.length) {
+      // stop any audio, set volume.
+        let player = document.createElement("audio");
+        player.pause();
+        player.volume = 0.05;
         this.scrollToTop();
         player.src = (require('../assets/alltasksdone.mp3'));
         player.play();
