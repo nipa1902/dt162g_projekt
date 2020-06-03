@@ -152,7 +152,7 @@ export default {
       // stop any audio, set volume.
         let player = document.createElement("audio");
         player.pause();
-        player.volume = 0.05;
+        player.volume = 0.25;
         this.scrollToTop();
         player.src = (require('../assets/alltasksdone.mp3'));
         player.play();
