@@ -37,9 +37,11 @@
   v-model="updateText" 
   v-on:keyup.enter="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')">
 
+  <!-- Update Post Button -->
   <button v-on:click="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')"  
   class="update-post"></button>
 
+  <!-- Update Cancel Button -->
   <button v-on:click="$event.target.parentNode.classList.toggle('update-show')" 
   class="cancel-update"></button>
 
