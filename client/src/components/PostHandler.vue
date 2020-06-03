@@ -7,7 +7,7 @@
 
 <!-- Create Post Here -->
   <div class="create-new-post">
-    <label for="create-new-post">Write down what you need to get done. <br> Click on a task to finish. <br> When all tasks are done, the list will disappear.</label>
+    <label for="create-new-post">Write down what you need to get done. <br> Click on a task to finish. <br> When all tasks are finished, the list will disappear.</label>
     <!-- Bind the input in the new post to the text data so we can pass it to API -->
     <input type="text" id="create-new-post" v-model="text" v-on:keyup.enter="createPost">
     <button v-on:click="createPost">Add!</button>
@@ -30,11 +30,17 @@
 
   <!-- Update -->
   <!-- <button  v-on:click="$event.target.parentNode.classList.toggle('update-show')" class="toggle-update"> -->
-  <button v-on:click="showUpdate()" class="toggle-update">
-  </button>
-  <input type="text" class="update-post" :id="index" :placeholder=" [[ post.text ]]" v-model="updateText" v-on:keyup.enter="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')">
-  <button v-on:click="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')"  class="update-post"></button>
-  <button v-on:click="$event.target.parentNode.classList.toggle('update-show')" class="cancel-update"></button>
+  <button v-on:click="showUpdate()" class="toggle-update"></button>
+  
+  <input type="text" class="update-post" :id="index" :placeholder=" [[ post.text ]]" 
+  v-model="updateText" 
+  v-on:keyup.enter="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')">
+
+  <button v-on:click="updatePost(post._id, text); $event.target.parentNode.classList.toggle('update-show')"  
+  class="update-post"></button>
+
+  <button v-on:click="$event.target.parentNode.classList.toggle('update-show')" 
+  class="cancel-update"></button>
 
   <!-- Delete -->
   <button v-on:click="deletePost(post._id)" class="delete-post">

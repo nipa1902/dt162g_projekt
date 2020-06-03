@@ -9,7 +9,7 @@ class PostService {
     // Static method so we can call it later from Vue without having to instantiate
     static getPosts() {
         return new Promise ((resolve,reject) => {
-            // Get data by url and save it
+            // Get data by url and then map it
             axios.get(url).then((res) => {
                 const data = res.data;
                 // If successful resolve promise by mapping the post and grabbing the date

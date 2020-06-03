@@ -95,7 +95,8 @@ router.patch('/:id', async (req, res) => {
 
 
 // Connect to database
-//  mongoose.connect('mongodb://localhost:27017/nipa1902_project', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true });
+// Old localhost connection for offline use
+// mongoose.connect('mongodb://localhost:27017/nipa1902_project', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true });
 
 mongoose.connect('mongodb+srv://dbUser:dbPassword@cluster0-0cgsv.mongodb.net/postDb?retryWrites=true&w=majority', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true });
 
